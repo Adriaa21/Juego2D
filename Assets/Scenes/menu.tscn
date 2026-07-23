@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://db1jwoj1qiksa"]
+
+[ext_resource type="Script" uid="uid://daa2mdod8y6bj" path="res://Assets/Scripts/menu.gd" id="1_trrmg"]
+
+[node name="Menu" type="Control" unique_id=627975632]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_trrmg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1539824497]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35301772, 0.35301772, 0.35301772, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=465487180]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -62.5
+offset_right = 84.0
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 17
+
+[node name="Play" type="Button" parent="ColorRect/VBoxContainer" unique_id=1225481830]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Jugar"
+
+[node name="Options" type="Button" parent="ColorRect/VBoxContainer" unique_id=346592130]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Opciones"
+
+[node name="Exit" type="Button" parent="ColorRect/VBoxContainer" unique_id=1802441060]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Salir"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
