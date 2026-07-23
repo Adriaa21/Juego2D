@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1781219655
+::res://::1784827747
 icon.svg::CompressedTexture2D::208879402724704707::1719923433::1780765051::1::::<><><>0<>0<>fbb1d1bc66ce340ed28cd45920bfa3c8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1719923433
 ::res://Assets/Fonts/::1780765051
@@ -15,9 +15,9 @@ Kenney Pixel Square.ttf::FontFile::6075035618100803282::1719923433::1780765051::
 Kenney Pixel.ttf::FontFile::4992013817170649244::1719923433::1780765051::1::::<><><>0<>0<>55cf897d60d9192fa73ec2f166a2e252<>res://.godot/imported/Kenney Pixel.ttf-3ea0b130f9506777e47ca30221d8aed9.fontdata::
 Kenney Rocket Square.ttf::FontFile::565012105639875620::1719923433::1780765051::1::::<><><>0<>0<>833b354512e6af9ce372539a5655c175<>res://.godot/imported/Kenney Rocket Square.ttf-622c0bdc4047dde26213540da385b0aa.fontdata::
 Kenney Rocket.ttf::FontFile::3697168090686927355::1719923433::1780765051::1::::<><><>0<>0<>b4059e8c26468e61899cfdb9c21769d9<>res://.godot/imported/Kenney Rocket.ttf-e85a3db9f30dd1d6be1a5a9e060404ba.fontdata::
-::res://Assets/Scenes/::1781220070
+::res://Assets/Scenes/::1781222392
 energy_cell.tscn::PackedScene::2249694445787797763::1719923433::0::1::::<><><>0<>0<><>::uid://bmwcakyripy3v::::res://Assets/Sprites/energy_cell.png<>res://Assets/Scripts/energy_cell.gd
-hud.tscn::PackedScene::8451558544192853899::1781220070::0::1::::<><><>0<>0<><>::uid://bmwcakyripy3v::::res://Assets/Sprites/energy_cell.png
+hud.tscn::PackedScene::8451558544192853899::1781222392::0::1::::<><><>0<>0<><>::uid://bmwcakyripy3v::::res://Assets/Sprites/energy_cell.png<>uid://dorgqv5ytretk::::res://Assets/Scripts/hud.gd
 moving_platform_large.tscn::PackedScene::288113892712343495::1719923433::0::1::::<><><>0<>0<><>::uid://btbnliobhtrdn::::res://Assets/Sprites/platform1_large.png<>res://Assets/Scripts/moving_platform.gd
 player.tscn::PackedScene::7395813824129858937::1781087193::0::1::::<><><>0<>0<><>::uid://br8xie8unmq84::::res://Assets/Scripts/player_controller.gd<>uid://d2twas6sbh6jg::::res://Assets/Sprites/player.png<>uid://cakm6hqmwiax0::::res://Assets/Scripts/player_animator.gd
 ::res://Assets/Scenes/Area Functionality/::1781087750
@@ -28,14 +28,14 @@ area_1.tscn::PackedScene::2100404983524366377::1781087824::0::1::::<><><>0<>0<><
 area_2.tscn::PackedScene::2991945907993119986::1781087823::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn
 ::res://Assets/Scenes/UI/::1781220130
 gameplay.tscn::PackedScene::3371818000284501359::1781220130::0::1::::<><><>0<>0<><>::uid://ddmt8c7maqsqr::::res://Assets/Scenes/player.tscn<>uid://dsn861hay1oyt::::res://Assets/Scenes/hud.tscn
-::res://Assets/Scripts/::1781087750
+::res://Assets/Scripts/::1781222392
 area_exit.gd::GDScript::9165892256252943089::1781086202::0::1::::AreaExit<>Area2D<><>0<>0<><>::
 energy_cell.gd::GDScript::2962828644923157059::1719923433::0::1::::<>Area2D<><>0<>0<><>::
-game_manager.gd::GDScript::6858838501737742620::1781087750::0::1::::<>Node<><>0<>0<><>::
+game_manager.gd::GDScript::6858838501737742620::1781222392::0::1::::<>Node<><>0<>0<><>::
+hud.gd::GDScript::8177394308940849368::1781221818::0::1::::HUD<>Node<><>0<>0<><>::
 moving_platform.gd::GDScript::3416655156250937736::1719923433::0::1::::MovingPlatform<>Path2D<><>0<>0<><>::
 player_animator.gd::GDScript::4794269501406310599::1719923433::0::1::::<>Node2D<><>0<>0<><>::
 player_controller.gd::GDScript::3649166530607010479::1781087504::0::1::::PlayerController<>CharacterBody2D<><>0<>0<><>::
-Hud.gd::GDScript::8177394308940849368::1781220427::0::1::::<>Node<><>0<>0<><>::
 ::res://Assets/Sprites/::1780765051
 enemy_1.png::CompressedTexture2D::4350928557193691059::1719923433::1780765051::1::::<><><>0<>0<>eb8f2796f18d515a5f646e339d3f8d8f<>res://.godot/imported/enemy_1.png-9300168548d6e7c6dd08bee358e19723.ctex::
 energy_cell.png::CompressedTexture2D::3274225115016856261::1719923433::1780765051::1::::<><><>0<>0<>1fc26cd024e437e8ba4beecec48a6004<>res://.godot/imported/energy_cell.png-49b1550e7ad59049450360646dcdc815.ctex::

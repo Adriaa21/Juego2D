@@ -1,3 +1,5 @@
+VBoxContainer
+ColorRect
 Label
 TextureRect
 CanvasLayer
