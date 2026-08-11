@@ -10,41 +10,64 @@ var player : PlayerController
 var hud : HUD
 
 func _ready():
+	pass
+
+func initialize():
 	hud = get_tree().get_first_node_in_group("hud")
 	area_container = get_tree().get_first_node_in_group("area_container")
 	player = get_tree().get_first_node_in_group("player")
-	load_area(starting_area)
-	
+	print(get_tree().get_nodes_in_group("hud"))
+	if hud == null:
+		
+		push_error("No se encontró el HUD.")
+		return
+
+	if area_container == null:
+		push_error("No se encontró el AreaContainer.")
+		return
+
+	if player == null:
+		push_error("No se encontró el Player.")
+		return
+
+	current_area = starting_area
+	load_area(current_area)
 	reset_energy_cells()
 
 func next_area():
 	current_area += 1
 	load_area(current_area)
-	
+
 func load_area(area_number):
-	#chech scene path
-	var full_path = area_path + "area_" + str(current_area) + ".tscn"
-	#get_tree().change_scene_to_file(full_path)
-	#print("The player has moved to area " + str(current_area))
+	var full_path = area_path + "area_" + str(area_number) + ".tscn"
+
 	var scene = load(full_path) as PackedScene
 	if !scene:
+		push_error("No existe la escena: " + full_path)
 		return
-	#remove the previuos scene
+
 	for child in area_container.get_children():
 		child.queue_free()
 		await child.tree_exited
+
 	var instance = scene.instantiate()
 	area_container.add_child(instance)
+
 	reset_energy_cells()
+
 	var player_start_position = get_tree().get_first_node_in_group("player_start_position") as Node2D
-	player.teleport_to_location(player_start_position.position)
+	if player_start_position:
+		player.teleport_to_location(player_start_position.position)
+
 func add_energy_cell():
 	energy_cells += 1
 	hud.update_energy_cell_label(energy_cells)
+
 	if energy_cells >= 4:
 		var portal = get_tree().get_first_node_in_group("area_exits") as AreaExit
-		portal.open()
-		hud.portal_opened()
+		if portal:
+			portal.open()
+			hud.portal_opened()
 
 func reset_energy_cells():
 	energy_cells = 0

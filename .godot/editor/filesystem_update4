@@ -1,2 +1,3 @@
-res://Assets/Scripts/menu.gd
-res://Assets/Scenes/menu.tscn
+res://Assets/Scenes/UI/gameplay.tscn
+res://Assets/Scenes/UI/gameplay.gd
+res://Assets/Scripts/game_manager.gd
