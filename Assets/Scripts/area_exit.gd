@@ -1,5 +1,4 @@
 extends Area2D
-class_name AreaExit
 
 @export var sprite : Sprite2D
 

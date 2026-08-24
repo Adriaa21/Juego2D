@@ -8,7 +8,7 @@ func update_energy_cell_label(number : int):
 	energy_cell_label.text = "x " + str(number)
 
 func portal_opened():
-	portal_label.text = "Portal Opened"
+	portal_label.text = "Portal Abierto"
 
 func portal_closed():
-	portal_label.text = "Portal Closed... get energy cells!!"
+	portal_label.text = "Portal Cerrado... Pilla mas cachivaches!!"

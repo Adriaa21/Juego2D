@@ -16,19 +16,6 @@ func initialize():
 	hud = get_tree().get_first_node_in_group("hud")
 	area_container = get_tree().get_first_node_in_group("area_container")
 	player = get_tree().get_first_node_in_group("player")
-	print(get_tree().get_nodes_in_group("hud"))
-	if hud == null:
-		
-		push_error("No se encontró el HUD.")
-		return
-
-	if area_container == null:
-		push_error("No se encontró el AreaContainer.")
-		return
-
-	if player == null:
-		push_error("No se encontró el Player.")
-		return
 
 	current_area = starting_area
 	load_area(current_area)
@@ -43,7 +30,7 @@ func load_area(area_number):
 
 	var scene = load(full_path) as PackedScene
 	if !scene:
-		push_error("No existe la escena: " + full_path)
+		push_error("ERROR EN CARGAR ESCENAS")
 		return
 
 	for child in area_container.get_children():
@@ -64,7 +51,7 @@ func add_energy_cell():
 	hud.update_energy_cell_label(energy_cells)
 
 	if energy_cells >= 4:
-		var portal = get_tree().get_first_node_in_group("area_exits") as AreaExit
+		var portal = get_tree().get_first_node_in_group("area_exit")
 		if portal:
 			portal.open()
 			hud.portal_opened()

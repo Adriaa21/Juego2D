@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1786393745
+::res://::1787596677
 icon.svg::CompressedTexture2D::208879402724704707::1719923433::1780765051::1::::<><><>0<>0<>fbb1d1bc66ce340ed28cd45920bfa3c8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1719923433
 ::res://Assets/Fonts/::1780765051
@@ -27,17 +27,18 @@ area_template.tscn::PackedScene::8786229152198070402::1781087750::0::1::::<><><>
 ::res://Assets/Scenes/Areas/::1781087824
 area_1.tscn::PackedScene::2100404983524366377::1781087824::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn
 area_2.tscn::PackedScene::2991945907993119986::1781087823::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn
-::res://Assets/Scenes/UI/::1785171974
-gameplay.tscn::PackedScene::3371818000284501359::1785171974::0::1::::<><><>0<>0<><>::uid://ddmt8c7maqsqr::::res://Assets/Scenes/player.tscn<>uid://dsn861hay1oyt::::res://Assets/Scenes/hud.tscn
-::res://Assets/Scripts/::1785341745
-area_exit.gd::GDScript::9165892256252943089::1781086202::0::1::::AreaExit<>Area2D<><>0<>0<><>::
+::res://Assets/Scenes/UI/::1786650732
+gameplay.gd::GDScript::2777388255595175059::1786461287::0::1::::<>Node2D<><>0<>0<><>::
+gameplay.tscn::PackedScene::3371818000284501359::1786650732::0::1::::<><><>0<>0<><>::uid://bftngcxdbnx2j::::res://Assets/Scenes/UI/gameplay.gd<>uid://ddmt8c7maqsqr::::res://Assets/Scenes/player.tscn<>uid://dsn861hay1oyt::::res://Assets/Scenes/hud.tscn
+::res://Assets/Scripts/::1786650732
+area_exit.gd::GDScript::9165892256252943089::1786650295::0::1::::<>Area2D<><>0<>0<><>::
 energy_cell.gd::GDScript::2962828644923157059::1719923433::0::1::::<>Area2D<><>0<>0<><>::
-game_manager.gd::GDScript::6858838501737742620::1785341745::0::1::::<>Node<><>0<>0<><>::
-hud.gd::GDScript::8177394308940849368::1784848241::0::1::::HUD<>Node<><>0<>0<><>::
-menu.gd::GDScript::7160923018789553239::1785341745::0::1::::<>Control<><>0<>0<><>::
+game_manager.gd::GDScript::6858838501737742620::1786650390::0::1::::<>Node<><>0<>0<><>::
+hud.gd::GDScript::8177394308940849368::1786650732::0::1::::HUD<>Node<><>0<>0<><>::
+menu.gd::GDScript::7160923018789553239::1786477572::0::1::::<>Control<><>0<>0<><>::
 moving_platform.gd::GDScript::3416655156250937736::1719923433::0::1::::MovingPlatform<>Path2D<><>0<>0<><>::
 player_animator.gd::GDScript::4794269501406310599::1719923433::0::1::::<>Node2D<><>0<>0<><>::
-player_controller.gd::GDScript::3649166530607010479::1781087504::0::1::::PlayerController<>CharacterBody2D<><>0<>0<><>::
+player_controller.gd::GDScript::3649166530607010479::1786478517::0::1::::PlayerController<>CharacterBody2D<><>0<>0<><>::
 ::res://Assets/Sprites/::1780765051
 enemy_1.png::CompressedTexture2D::4350928557193691059::1719923433::1780765051::1::::<><><>0<>0<>eb8f2796f18d515a5f646e339d3f8d8f<>res://.godot/imported/enemy_1.png-9300168548d6e7c6dd08bee358e19723.ctex::
 energy_cell.png::CompressedTexture2D::3274225115016856261::1719923433::1780765051::1::::<><><>0<>0<>1fc26cd024e437e8ba4beecec48a6004<>res://.godot/imported/energy_cell.png-49b1550e7ad59049450360646dcdc815.ctex::
