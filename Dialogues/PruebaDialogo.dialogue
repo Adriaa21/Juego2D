@@ -1,0 +1,12 @@
+~ start
+Tebas: Hi, this is some dialogue.
+Tebas: Here are some choices.
+~ ola
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one. => ola
+- Start again => start
+- End the conversation => END
+Tebas: For more information see the online documentation.
+=> END

@@ -1,0 +1,112 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_43bom"]
+
+[resource]
+script = ExtResource("1_43bom")
+using_states = PackedStringArray()
+titles = {
+"ola": "4",
+"start": "1"
+}
+character_names = PackedStringArray("Tebas", "Nathan")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "Tebas",
+&"id": "1",
+&"next_id": "2",
+&"text": "Hi, this is some dialogue.",
+&"type": "dialogue"
+},
+"10": {
+&"character": "Tebas",
+&"id": "10",
+&"next_id": "11",
+&"text": "For more information see the online documentation.",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"character": "Tebas",
+&"id": "2",
+&"next_id": "3",
+&"text": "Here are some choices.",
+&"type": "dialogue"
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"type": "title"
+},
+"4": {
+&"id": "4",
+&"next_id": "5",
+&"responses": PackedStringArray("4", "6", "8", "9"),
+&"text": "First one",
+&"type": "response"
+},
+"5": {
+&"character": "Nathan",
+&"id": "5",
+&"next_id": "10",
+&"text": "You picked the first one.",
+&"type": "dialogue"
+},
+"6": {
+&"id": "6",
+&"next_id": "7",
+&"text": "Second one",
+&"type": "response"
+},
+"7": {
+&"character": "Nathan",
+&"id": "7",
+&"next_id": "4",
+&"text": "You picked the second one.",
+&"type": "dialogue"
+},
+"8": {
+&"id": "8",
+&"next_id": "1",
+&"text": "Start again",
+&"type": "response"
+},
+"9": {
+&"id": "9",
+&"next_id": "end",
+&"text": "End the conversation",
+&"type": "response"
+}
+}
+raw_text = "~ start
+Tebas: Hi, this is some dialogue.
+Tebas: Here are some choices.
+~ ola
+- First one
+	Nathan: You picked the first one.
+- Second one
+	Nathan: You picked the second one. => ola
+- Start again => start
+- End the conversation => END
+Tebas: For more information see the online documentation.
+=> END"
+metadata/dialogue_manager_version = "3.10.4"
