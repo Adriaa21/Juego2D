@@ -27,14 +27,14 @@ lines = {
 &"character": "Messi",
 &"id": "2",
 &"next_id": "3",
-&"text": "Que hago aqui ?",
+&"text": "ghjghj",
 &"type": "dialogue"
 },
 "3": {
 &"character": "Messi",
 &"id": "3",
 &"next_id": "6",
-&"text": "Lo ultimo que recuerdo es estar jugando al Light Souls en mi casa.",
+&"text": "ghjghjhjhjhjh",
 &"type": "dialogue"
 },
 "5": {
@@ -59,8 +59,8 @@ lines = {
 }
 raw_text = "~ start
 Messi: asdasdad ?
-Messi: Que hago aqui ?
-Messi: Lo ultimo que recuerdo es estar jugando al Light Souls en mi casa.
+Messi: ghjghj
+Messi: ghjghjhjhjhjh
 
 
 => END"
