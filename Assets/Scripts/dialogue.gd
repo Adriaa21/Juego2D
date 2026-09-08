@@ -1,24 +1,47 @@
-extends Area2D
+extends Node
 
-@export var sprite : Sprite2D
-@export_file("*.dialogue") var dialogue_path : String
+var dialogues_seen: Array[String] = []
+var dialogue_active := false
 
-var is_open = false
+func show_dialogue(dialogue_path: String) -> void:
+	print("SHOW DIALOGUE")
+	print("PATH: ", dialogue_path)
 
-func _ready():
-	close()
+	if dialogue_path in dialogues_seen:
+		print("EL DIÁLOGO YA SE HA MOSTRADO")
+		return
 
-func open():
-	is_open = true
-	sprite.region_rect.position.x = 22
+	var dialogue = load(dialogue_path)
 
-func close():
-	is_open = false
+	print("DIALOGUE: ", dialogue)
 
-func _on_body_entered(body):
-	if is_open && body is PlayerController:
-		GameManager.next_area()
+	if dialogue == null:
+		push_error("No se ha podido cargar el diálogo: " + dialogue_path)
+		return
 
-func _on_dialogues_collision_shape_body_entered(body: Node2D) -> void:
-	if body is PlayerController:
-		DialogueController.show_dialogue(dialogue_path)
+	print("DIÁLOGO CARGADO CORRECTAMENTE")
+
+	dialogues_seen.append(dialogue_path)
+
+	dialogue_active = true
+
+	var player = get_tree().get_first_node_in_group("player") as PlayerController
+
+	if player:
+		player.set_physics_process(false)
+		player.velocity = Vector2.ZERO
+
+	print("MOSTRANDO DIÁLOGO")
+
+	DialogueManager.show_dialogue_balloon(dialogue)
+
+	print("BALLOON MOSTRADO")
+
+	await DialogueManager.dialogue_ended
+
+	print("DIÁLOGO TERMINADO")
+
+	dialogue_active = false
+
+	if player:
+		player.set_physics_process(true)

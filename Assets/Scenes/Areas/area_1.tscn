@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://46pml4o1fbob"]
 
 [ext_resource type="PackedScene" uid="uid://dxgd57qor82jm" path="res://Assets/Scenes/Area Functionality/area_template.tscn" id="1_3ut05"]
+[ext_resource type="Script" uid="uid://ckm0wktc4gtov" path="res://Assets/Scenes/Areas/dialogues_collision_shape.gd" id="2_3uyhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uidp5"]
 size = Vector2(20, 42)
@@ -28,15 +29,28 @@ position = Vector2(164, -46)
 [node name="EnergyCell4" parent="EnergyCells" parent_id_path=PackedInt32Array(1885144170) index="3" unique_id=544221525]
 position = Vector2(204, -46)
 
-[node name="DialoguesCollisionShape" type="Area2D" parent="." index="5" unique_id=1101699373]
+[node name="DialogueCollision" type="Node2D" parent="." index="5" unique_id=1662676070]
+position = Vector2(48, -19)
 
-[node name="CollisionShape2D_Dialogue1" type="CollisionShape2D" parent="DialoguesCollisionShape" index="0" unique_id=872103874]
+[node name="DCS_1" type="Area2D" parent="DialogueCollision" index="0" unique_id=1101699373]
+position = Vector2(-48, 19)
+script = ExtResource("2_3uyhe")
+dialogue_path = "uid://cya2n0b4n4k1u"
+
+[node name="CollisionShape2D_Dialogue1" type="CollisionShape2D" parent="DialogueCollision/DCS_1" index="0" unique_id=872103874]
 position = Vector2(48, -19)
 shape = SubResource("RectangleShape2D_uidp5")
 
-[node name="CollisionShape2D_Dialogue2" type="CollisionShape2D" parent="DialoguesCollisionShape" index="1" unique_id=716284148]
+[node name="DCS_2" type="Area2D" parent="DialogueCollision" index="1" unique_id=2036053801]
+position = Vector2(-96, 38)
+script = ExtResource("2_3uyhe")
+dialogue_path = "uid://bh1mde45wxh3v"
+
+[node name="CollisionShape2D_Dialogue2" type="CollisionShape2D" parent="DialogueCollision/DCS_2" index="0" unique_id=208531422]
 position = Vector2(168, -39)
 shape = SubResource("RectangleShape2D_3uyhe")
 
-[connection signal="body_entered" from="DialoguesCollisionShape" to="AreaExit" method="_on_dialogues_collision_shape_body_entered"]
-[connection signal="child_entered_tree" from="DialoguesCollisionShape/CollisionShape2D_Dialogue1" to="AreaExit" method="_on_collision_shape_2d_child_entered_tree"]
+[connection signal="body_entered" from="DialogueCollision/DCS_1" to="AreaExit" method="_on_dialogues_collision_shape_body_entered"]
+[connection signal="body_entered" from="DialogueCollision/DCS_1" to="DialogueCollision/DCS_1" method="_on_body_entered"]
+[connection signal="child_entered_tree" from="DialogueCollision/DCS_1/CollisionShape2D_Dialogue1" to="AreaExit" method="_on_collision_shape_2d_child_entered_tree"]
+[connection signal="body_entered" from="DialogueCollision/DCS_2" to="DialogueCollision/DCS_2" method="_on_body_entered"]
