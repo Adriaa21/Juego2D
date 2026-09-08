@@ -1,2 +1,4 @@
 res://Assets/Scenes/Areas/area_1.tscn
 res://Assets/Scripts/game_manager.gd
+res://Assets/Scripts/dialogue.gd
+res://Assets/Scripts/area_exit.gd

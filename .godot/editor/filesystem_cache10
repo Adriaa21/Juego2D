@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1788344023
+::res://::1788886692
 icon.svg::CompressedTexture2D::208879402724704707::1719923433::1780765051::1::::<><><>0<>0<>fbb1d1bc66ce340ed28cd45920bfa3c8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1787596959
 ::res://addons/dialogue_manager/::1787596961
@@ -102,17 +102,17 @@ player.tscn::PackedScene::7395813824129858937::1784847933::0::1::::<><><>0<>0<><
 ::res://Assets/Scenes/Area Functionality/::1781087750
 area_exit.tscn::PackedScene::1783056804213642530::1719923433::0::1::::<><><>0<>0<><>::uid://b77gyw0pb7g38::::res://Assets/Sprites/portal.png<>res://Assets/Scripts/area_exit.gd
 area_template.tscn::PackedScene::8786229152198070402::1781087750::0::1::::<><><>0<>0<><>::uid://0nyxj6rb08sc::::res://Assets/Scenes/Area Functionality/area_exit.tscn<>uid://7b1eyq40vqkx::::res://Assets/Scenes/energy_cell.tscn
-::res://Assets/Scenes/Areas/::1788343583
-area_1.tscn::PackedScene::2100404983524366377::1788343583::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn
+::res://Assets/Scenes/Areas/::1788888450
+area_1.tscn::PackedScene::2100404983524366377::1788888477::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn
 area_2.tscn::PackedScene::2991945907993119986::1781087823::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn
 ::res://Assets/Scenes/UI/::1786650732
 gameplay.gd::GDScript::2777388255595175059::1786461287::0::1::::<>Node2D<><>0<>0<><>::
 gameplay.tscn::PackedScene::3371818000284501359::1786650732::0::1::::<><><>0<>0<><>::uid://bftngcxdbnx2j::::res://Assets/Scenes/UI/gameplay.gd<>uid://ddmt8c7maqsqr::::res://Assets/Scenes/player.tscn<>uid://dsn861hay1oyt::::res://Assets/Scenes/hud.tscn
-::res://Assets/Scripts/::1788343583
-area_exit.gd::GDScript::9165892256252943089::1787948204::0::1::::<>Area2D<><>0<>0<><>::
-dialogue.gd::GDScript::712943116390122119::1787946111::0::1::::<>Node<><>0<>0<><>::
+::res://Assets/Scripts/::1788887348
+area_exit.gd::GDScript::9165892256252943089::1788887348::0::1::::<>Area2D<><>0<>0<><>::
+dialogue.gd::GDScript::712943116390122119::1788885265::0::1::::<>Node<><>0<>0<><>::
 energy_cell.gd::GDScript::2962828644923157059::1719923433::0::1::::<>Area2D<><>0<>0<><>::
-game_manager.gd::GDScript::6858838501737742620::1788343583::0::1::::<>Node<><>0<>0<><>::
+game_manager.gd::GDScript::6858838501737742620::1788887348::0::1::::<>Node<><>0<>0<><>::
 hud.gd::GDScript::8177394308940849368::1786650732::0::1::::HUD<>Node<><>0<>0<><>::
 menu.gd::GDScript::7160923018789553239::1786477572::0::1::::<>Control<><>0<>0<><>::
 moving_platform.gd::GDScript::3416655156250937736::1719923433::0::1::::MovingPlatform<>Path2D<><>0<>0<><>::
@@ -125,6 +125,7 @@ platform1_large.png::CompressedTexture2D::3722882497078313311::1719923433::17807
 player.png::CompressedTexture2D::9094920774602900220::1719923433::1780765051::1::::<><><>0<>0<>07e0cfccda5b83078b91bfe1356e2a6e<>res://.godot/imported/player.png-7c09656d9ce490aabfa1a9222d99cb2e.ctex::
 portal.png::CompressedTexture2D::4698932124068313377::1719923433::1780765051::1::::<><><>0<>0<>459e393239771b3c5ae7493b0bb60cf9<>res://.godot/imported/portal.png-90664bc9fe17788cb41bd2481cacce24.ctex::
 tiles_1.png::CompressedTexture2D::951783565406765350::1719923433::1780765051::1::::<><><>0<>0<>b5fc14e7960b7aeb97543eb398209ad1<>res://.godot/imported/tiles_1.png-caae9e096ed63b671bb0775098168e12.ctex::
-::res://Dialogues/::1787946112
-D_1-1.dialogue::Resource::6459037504789147464::0::0::1::::<><><>0<>0<>b504120be440c3c642a9ceda4ec2f4f0<>::
-PruebaDialogo.dialogue::Resource::7208761871069667433::0::0::1::::<><><>0<>0<>a93fe5df0987d2c74dd7b37463474451<>::
+::res://Dialogues/::1788888466
+D_1-1.dialogue::Resource::6459037504789147464::1787946111::1787946112::1::::<><><>0<>0<>b504120be440c3c642a9ceda4ec2f4f0<>res://.godot/imported/D_1-1.dialogue-2fc96078aca1b5a3008c05e68c532efc.tres::
+D_1-2.dialogue::Resource::2932150628345897985::1788888477::1788888478::1::::<><><>0<>0<>b1d674c9185379d2c4e49eb2041df84d<>res://.godot/imported/D_1-2.dialogue-88799f913b988b9d684d8ae282a81ec6.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
+PruebaDialogo.dialogue::Resource::7208761871069667433::1787943321::1787943321::1::::<><><>0<>0<>a93fe5df0987d2c74dd7b37463474451<>res://.godot/imported/PruebaDialogo.dialogue-b3b019d062d9cdbb9ee200a056f5f804.tres::

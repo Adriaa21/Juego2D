@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uidp5"]
 size = Vector2(20, 42)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uyhe"]
+size = Vector2(20, 50)
+
 [node name="Area1" unique_id=554843001 instance=ExtResource("1_3ut05")]
 
 [node name="PlayerStartPosition" parent="." index="0" unique_id=1752638829]
@@ -25,8 +28,15 @@ position = Vector2(164, -46)
 [node name="EnergyCell4" parent="EnergyCells" parent_id_path=PackedInt32Array(1885144170) index="3" unique_id=544221525]
 position = Vector2(204, -46)
 
-[node name="Area2D" type="Area2D" parent="." index="5" unique_id=1101699373]
+[node name="DialoguesCollisionShape" type="Area2D" parent="." index="5" unique_id=1101699373]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0" unique_id=872103874]
+[node name="CollisionShape2D_Dialogue1" type="CollisionShape2D" parent="DialoguesCollisionShape" index="0" unique_id=872103874]
 position = Vector2(48, -19)
 shape = SubResource("RectangleShape2D_uidp5")
+
+[node name="CollisionShape2D_Dialogue2" type="CollisionShape2D" parent="DialoguesCollisionShape" index="1" unique_id=716284148]
+position = Vector2(168, -39)
+shape = SubResource("RectangleShape2D_3uyhe")
+
+[connection signal="body_entered" from="DialoguesCollisionShape" to="AreaExit" method="_on_dialogues_collision_shape_body_entered"]
+[connection signal="child_entered_tree" from="DialoguesCollisionShape/CollisionShape2D_Dialogue1" to="AreaExit" method="_on_collision_shape_2d_child_entered_tree"]

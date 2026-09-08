@@ -51,7 +51,7 @@ func add_energy_cell():
 	hud.update_energy_cell_label(energy_cells)
 
 	if energy_cells >= 4:
-		var portal = get_tree().get_first_node_in_group("area_exit")
+		var portal = get_tree().get_first_node_in_group("area_exits")
 		if portal:
 			portal.open()
 			hud.portal_opened()
