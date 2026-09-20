@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bmwcakyripy3v" path="res://Assets/Sprites/energy_cell.png" id="1_71ymp"]
 [ext_resource type="Script" uid="uid://dorgqv5ytretk" path="res://Assets/Scripts/hud.gd" id="1_th0pt"]
 
-[node name="HUD" type="Control" unique_id=20553258 node_paths=PackedStringArray("energy_cell_label", "portal_label") groups=["hud"]]
+[node name="HUD" type="Control" unique_id=20553258 node_paths=PackedStringArray("energy_cell_label", "portal_label", "Death_Number") groups=["hud"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_th0pt")
 energy_cell_label = NodePath("EnergyCellTexture/EnergyCellLabel")
 portal_label = NodePath("PortalLabel")
+Death_Number = NodePath("DeathNumber")
 
 [node name="EnergyCellTexture" type="TextureRect" parent="." unique_id=367489343]
 layout_mode = 1
@@ -37,3 +38,18 @@ offset_top = 8.0
 offset_right = 89.0
 offset_bottom = 31.0
 text = "Portal Closed"
+
+[node name="DeathLabel" type="Label" parent="." unique_id=822728462]
+layout_mode = 0
+offset_left = 1016.0
+offset_right = 1080.0
+offset_bottom = 23.0
+text = "Deaths:"
+horizontal_alignment = 1
+
+[node name="DeathNumber" type="Label" parent="." unique_id=1962830654]
+layout_mode = 0
+offset_left = 1080.0
+offset_right = 1120.0
+offset_bottom = 23.0
+text = "x 00"

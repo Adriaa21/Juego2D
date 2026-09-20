@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bivk6aikgy7ic"]
 
 [ext_resource type="PackedScene" uid="uid://dxgd57qor82jm" path="res://Assets/Scenes/Area Functionality/area_template.tscn" id="1_mjltc"]
+[ext_resource type="Script" uid="uid://xbc6ix42it4c" path="res://Assets/Scenes/Areas/Traps.gd" id="2_y4hc0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fsu62"]
 
 [node name="Area2" unique_id=96102569 instance=ExtResource("1_mjltc")]
 
@@ -21,3 +24,12 @@ position = Vector2(194, -19)
 
 [node name="EnergyCell4" parent="EnergyCells" parent_id_path=PackedInt32Array(1885144170) index="3" unique_id=544221525]
 position = Vector2(304, -17)
+
+[node name="Enemy" type="Area2D" parent="." index="5" unique_id=1850197005]
+script = ExtResource("2_y4hc0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" index="0" unique_id=2124591142 groups=["Enemy"]]
+position = Vector2(-88, 16)
+shape = SubResource("CapsuleShape2D_fsu62")
+
+[connection signal="body_entered" from="Enemy" to="Enemy" method="_on_body_entered"]

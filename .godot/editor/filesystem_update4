@@ -1,5 +1,4 @@
 res://Assets/Scenes/Areas/area_1.tscn
-res://Assets/Scripts/game_manager.gd
-res://Assets/Scripts/dialogue.gd
+res://Assets/Scenes/Areas/Traps.gd
 res://Assets/Scripts/area_exit.gd
-res://Assets/Scenes/Areas/dialogues_collision_shape.gd
+res://Assets/Scenes/Areas/area_2.tscn

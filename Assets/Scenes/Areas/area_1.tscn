@@ -2,12 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://dxgd57qor82jm" path="res://Assets/Scenes/Area Functionality/area_template.tscn" id="1_3ut05"]
 [ext_resource type="Script" uid="uid://ckm0wktc4gtov" path="res://Assets/Scenes/Areas/dialogues_collision_shape.gd" id="2_3uyhe"]
+[ext_resource type="Script" uid="uid://xbc6ix42it4c" path="res://Assets/Scenes/Areas/Traps.gd" id="3_8wi1m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uidp5"]
 size = Vector2(20, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uyhe"]
 size = Vector2(20, 50)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3uyhe"]
 
 [node name="Area1" unique_id=554843001 instance=ExtResource("1_3ut05")]
 
@@ -50,7 +53,15 @@ dialogue_path = "uid://bh1mde45wxh3v"
 position = Vector2(168, -39)
 shape = SubResource("RectangleShape2D_3uyhe")
 
+[node name="Enemy" type="Area2D" parent="." index="6" unique_id=1357911104]
+script = ExtResource("3_8wi1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" index="0" unique_id=607703114 groups=["Enemy"]]
+position = Vector2(-88, 16)
+shape = SubResource("CapsuleShape2D_3uyhe")
+
 [connection signal="body_entered" from="DialogueCollision/DCS_1" to="AreaExit" method="_on_dialogues_collision_shape_body_entered"]
 [connection signal="body_entered" from="DialogueCollision/DCS_1" to="DialogueCollision/DCS_1" method="_on_body_entered"]
 [connection signal="child_entered_tree" from="DialogueCollision/DCS_1/CollisionShape2D_Dialogue1" to="AreaExit" method="_on_collision_shape_2d_child_entered_tree"]
 [connection signal="body_entered" from="DialogueCollision/DCS_2" to="DialogueCollision/DCS_2" method="_on_body_entered"]
+[connection signal="body_entered" from="Enemy" to="Enemy" method="_on_body_entered"]

@@ -7,6 +7,8 @@ class_name PlayerController
 var speed_multiplier = 30.0
 var jump_multiplier = -30.0
 var direction = 0.0
+var HP  = 1
+
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -34,3 +36,12 @@ func _physics_process(delta):
 
 func teleport_to_location(new_location):
 	position = new_location
+
+func die():
+	GameManager.death +=1
+	get_tree().reload_current_scene()
+
+func damage():
+	HP -= 1
+	if HP <= 0:
+		die()
