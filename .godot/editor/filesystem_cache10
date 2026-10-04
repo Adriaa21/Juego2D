@@ -1,5 +1,5 @@
 f098f8d3115d962055284dee314b4f89
-::res://::1789909006
+::res://::1791127214
 icon.svg::CompressedTexture2D::208879402724704707::1719923433::1780765051::1::::<><><>0<>0<>fbb1d1bc66ce340ed28cd45920bfa3c8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1787596959
 ::res://addons/dialogue_manager/::1787596961
@@ -102,15 +102,16 @@ player.tscn::PackedScene::7395813824129858937::1784847933::0::1::::<><><>0<>0<><
 ::res://Assets/Scenes/Area Functionality/::1781087750
 area_exit.tscn::PackedScene::1783056804213642530::1719923433::0::1::::<><><>0<>0<><>::uid://b77gyw0pb7g38::::res://Assets/Sprites/portal.png<>res://Assets/Scripts/area_exit.gd
 area_template.tscn::PackedScene::8786229152198070402::1781087750::0::1::::<><><>0<>0<><>::uid://0nyxj6rb08sc::::res://Assets/Scenes/Area Functionality/area_exit.tscn<>uid://7b1eyq40vqkx::::res://Assets/Scenes/energy_cell.tscn
-::res://Assets/Scenes/Areas/::1788907990
-area_1.tscn::PackedScene::2100404983524366377::1788907990::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn<>uid://ckm0wktc4gtov::::res://Assets/Scenes/Areas/dialogues_collision_shape.gd
-area_2.tscn::PackedScene::2991945907993119986::1781087823::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn
+::res://Assets/Scenes/Areas/::1789917294
+area_1.tscn::PackedScene::2100404983524366377::1789917294::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn<>uid://ckm0wktc4gtov::::res://Assets/Scenes/Areas/dialogues_collision_shape.gd<>uid://xbc6ix42it4c::::res://Assets/Scenes/Areas/Traps.gd
+area_2.tscn::PackedScene::2991945907993119986::1789917293::0::1::::<><><>0<>0<><>::uid://dxgd57qor82jm::::res://Assets/Scenes/Area Functionality/area_template.tscn<>uid://xbc6ix42it4c::::res://Assets/Scenes/Areas/Traps.gd
 dialogues_collision_shape.gd::GDScript::5501060103814980797::1788893441::0::1::::<>Area2D<><>0<>0<><>::
+Traps.gd::GDScript::1616585032096737784::1789917130::0::1::::<>Area2D<><>0<>0<><>::
 ::res://Assets/Scenes/UI/::1786650732
 gameplay.gd::GDScript::2777388255595175059::1786461287::0::1::::<>Node2D<><>0<>0<><>::
 gameplay.tscn::PackedScene::3371818000284501359::1786650732::0::1::::<><><>0<>0<><>::uid://bftngcxdbnx2j::::res://Assets/Scenes/UI/gameplay.gd<>uid://ddmt8c7maqsqr::::res://Assets/Scenes/player.tscn<>uid://dsn861hay1oyt::::res://Assets/Scenes/hud.tscn
-::res://Assets/Scripts/::1789468804
-area_exit.gd::GDScript::9165892256252943089::1788893441::0::1::::<>Area2D<><>0<>0<><>::
+::res://Assets/Scripts/::1789916931
+area_exit.gd::GDScript::9165892256252943089::1789916931::0::1::::<>Area2D<><>0<>0<><>::
 dialogue.gd::GDScript::712943116390122119::1788893441::0::1::::<>Node<><>0<>0<><>::
 energy_cell.gd::GDScript::2962828644923157059::1719923433::0::1::::<>Area2D<><>0<>0<><>::
 game_manager.gd::GDScript::6858838501737742620::1789465909::0::1::::<>Node<><>0<>0<><>::
