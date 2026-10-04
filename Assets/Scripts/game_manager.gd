@@ -18,7 +18,6 @@ func initialize():
 	player = get_tree().get_first_node_in_group("player")
 	hud.update_death_number(death)
 
-	current_area = starting_area
 	load_area(current_area)
 	reset_energy_cells()
 
